@@ -1,6 +1,6 @@
 {% set python_min = '3.10' %}
 {% set name = "pyclimo" %}
-{% set version = "1.0" %}
+{% set version = "1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyclimo-{{ version }}.tar.gz
-  sha256: 5fcedb6aae15e46b73113ae9596800a65dfbf2c37015c401b1bea6067c0f13fe
+  sha256: 62d2c1ea6ac64a6d24266809864771429a06fffc596efc9930256a767b9ac412
 
 build:
   noarch: python
@@ -32,6 +32,7 @@ requirements:
     - xeofs >=3.0.4
     - rasterio >=1.4.3
     - pytz >=2024.1
+    - geopandas >=1.1.0
 
 test:
   imports:
